@@ -10,24 +10,12 @@ import leadRoutes from './routes/leadRoutes.js';
 const app: Express = express();
 
 // Middleware
-const allowedOrigins = config.corsOrigin
-  .split(',')
-  .map((origin) => origin.trim())
-  .filter(Boolean);
-
 app.use(
   cors({
-    origin: (origin, callback) => {
-      if (!origin || allowedOrigins.includes('*')) {
-        return callback(null, true);
-      }
-
-      if (allowedOrigins.includes(origin)) {
-        return callback(null, true);
-      }
-
-      return callback(new Error(`CORS policy does not allow access from ${origin}`));
-    },
+    origin: [
+      'http://localhost:5173',
+      'https://gigflow-dashboard-tau.vercel.app',
+    ],
     credentials: true,
   })
 );
