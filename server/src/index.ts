@@ -10,7 +10,27 @@ import leadRoutes from './routes/leadRoutes.js';
 const app: Express = express();
 
 // Middleware
-app.use(cors({ origin: config.corsOrigin, credentials: true }));
+const allowedOrigins = config.corsOrigin
+  .split(',')
+  .map((origin) => origin.trim())
+  .filter(Boolean);
+
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes('*')) {
+        return callback(null, true);
+      }
+
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      return callback(new Error(`CORS policy does not allow access from ${origin}`));
+    },
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
