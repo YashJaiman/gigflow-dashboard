@@ -1,4 +1,6 @@
-# 🚀 GigFlow — Smart Leads Dashboard
+# GigFlow Dashboard
+
+A full-stack MERN Smart Leads Management Dashboard with authentication, lead management, filtering, CSV export, and responsive UI.
 
 ![React](https://img.shields.io/badge/React-18-%2361DAFB?logo=react&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-4.9-%23007ACC?logo=typescript&logoColor=white)
@@ -8,27 +10,58 @@
 ![Vite](https://img.shields.io/badge/Vite-5.0-%2344C5F6?logo=vite&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
+## 🚀 Live Demo
 
-## GigFlow
-**A modern full-stack leads management dashboard** built for growth-focused sales teams. GigFlow combines secure authentication, intuitive lead workflows, and production-ready architecture in one polished solution.
+Frontend (Vercel):
+https://gigflow-dashboard-tau.vercel.app
 
----
+Backend API (Render):
+https://gigflow-backend-iemk.onrender.com
 
-## 🚀 Project Summary
+## ✨ Features
 
-GigFlow is a production-ready MERN-style application featuring:
+- User Authentication (Login/Register)
+- JWT Authentication
+- Lead Management Dashboard
+- Create, Update, Delete Leads
+- Search and Filter Leads
+- Export Leads to CSV
+- Protected Routes
+- Responsive UI
+- MongoDB Atlas Database
+- REST API Integration
+- Docker Support
 
-- Type-safe frontend and backend with TypeScript
-- Secure JWT authentication with role-based access control
-- Lead CRUD, filtering, pagination, and export
-- Responsive Tailwind UI for desktop and mobile
-- Docker Compose support for local development
+## 🛠️ Tech Stack
 
----
+### Frontend:
+- React
+- TypeScript
+- Vite
+- Axios
+- React Router
 
-## 🌐 Live Demo
+### Backend:
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT
+- bcrypt
 
-> Placeholder: add your hosted URL here after deployment.
+### Deployment:
+- Vercel (Frontend)
+- Render (Backend)
+- MongoDB Atlas (Database)
+
+## 📦 Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/YashJaiman/gigflow-dashboard.git
+cd gigflow-dashboard
+```
 
 ---
 
